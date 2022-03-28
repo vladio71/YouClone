@@ -1,0 +1,39 @@
+
+@use 'src/components/NavBar/NavBar.module' as n
+.searchContainer
+  background: n.$color_back
+  position: fixed
+  margin-left: 20rem
+  width: 100%
+  top: 0rem
+
+
+.filterGrid
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  align-content: space-between
+  width: 40rem
+  margin: 1rem auto
+  gap: 2rem
+
+.search
+  margin-top: 1rem
+  width: 60vw
+  min-width: 200px
+
+
+
+
+.mainGrid
+  display: flex
+  flex-wrap: wrap
+  margin-top: 1rem
+  margin-left: 16rem
+
+
+
+@media (max-width: 80rem)
+  .mainGrid
+    margin-left: 10rem
+
+

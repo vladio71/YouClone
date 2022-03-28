@@ -1,0 +1,49 @@
+.MainGrid {
+  display: grid;
+  justify-content: start;
+  margin: 2rem;
+  margin-left: 8rem;
+  gap: 2rem;
+  grid-template-columns: 1fr 0.5fr;
+}
+
+.Title {
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+}
+
+.Caption {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.innerGrid {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+}
+
+div.Channel > img {
+  border-radius: 50%;
+  margin-top: 0.4rem;
+}
+
+.chnInfo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: black;
+}
+
+.chnlEnd {
+  margin-bottom: 2rem;
+}
+
+.Description {
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=SingleVid.module.css.map */

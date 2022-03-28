@@ -1,0 +1,19 @@
+
+@use 'src/components/NavBar/NavBar.module' as n
+
+.Head
+  display: grid
+  grid-template-columns: 1fr 6fr 1fr
+  background: n.$color_back
+  min-height: 5rem
+  position: fixed
+  width: 100%
+.firstCell
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #000000
+  font-size: 1.6rem
+  & > p
+    margin: .4rem
+

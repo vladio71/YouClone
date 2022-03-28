@@ -1,0 +1,46 @@
+.MainGrid {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr;
+  height: fit-content;
+}
+
+.back {
+  background: black;
+}
+
+.innerBack {
+  background-size: cover;
+  min-height: 20rem;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 8rem 3fr;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  max-height: 300rem;
+  min-width: 65vw;
+}
+
+.descipGrid {
+  display: grid;
+  margin-top: 1rem;
+  max-width: 50vw;
+  text-align: start;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 90rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*# sourceMappingURL=Channel.module.css.map */
