@@ -23,7 +23,7 @@ YouClone is a React TS project that helps you find YouTube vids, watch or downlo
 ### Home Page
 Web            |  Responsive
 :-------------------------:|:-------------------------:
-<img src="https://github.com/vladio71/YouClone/blob/master/public/YouTube.png?raw=true" width=1800 height=500/>  |  ![](public/HomeResponsive.png)
+<img src="https://github.com/vladio71/YouClone/blob/master/public/YouTube.png?raw=true" width=1800 height=400/>  |  ![](public/HomeResponsive.png)
  ### Single Video Page
  Web            |  Responsive
 :-------------------------:|:-------------------------:
