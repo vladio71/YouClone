@@ -1,19 +1,31 @@
 
 @use 'src/components/NavBar/NavBar.module' as n
-
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap')
 .Head
   display: grid
   grid-template-columns: 1fr 6fr 1fr
   background: n.$color_back
   min-height: 5rem
-  position: fixed
   width: 100%
+  max-width: 100vw
+  position: fixed
 .firstCell
   display: flex
   align-items: center
+  gap: .3rem
   justify-content: center
   color: #000000
   font-size: 1.6rem
+  margin-left: .3rem
   & > p
     margin: .4rem
+
+.me
+  font-size: 1rem
+  margin-top: 1rem
+  font-weight: normal
+  font-family: 'Permanent Marker', cursive
+  @media (max-width: 60rem)
+    display: none
+
 

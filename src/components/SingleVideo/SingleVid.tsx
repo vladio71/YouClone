@@ -67,6 +67,7 @@ const SingleVid = () => {
     const [info, setInfo] = useState<VidInfo>()
     const [channel, setChannel] = useState<ChannelInfo>()
     const [relatedArr, setRelArr] = useState<Vid[]>([])
+    const [Description, setDescription] = useState(false)
 
     useEffect(() => {
         getComments(id!).then((response) => {
@@ -86,8 +87,7 @@ const SingleVid = () => {
 
     return (
         <div className={sa.MainGrid}>
-            <div>
-
+            <div className={sa.vidGrid}>
                 <iframe
                     width="1100"
                     height="700"
@@ -101,9 +101,7 @@ const SingleVid = () => {
                     info !== undefined &&
                     <div>
                         <div className={sa.Title}>
-
                             <div>
-
                                 {info.title}
                                 <div className={sa.Caption}>{info.viewCount} views</div>
                             </div>
@@ -133,10 +131,20 @@ const SingleVid = () => {
                                 </div>
                                 {info.shortDescription.length > 200 ?
                                     <>
-                                        {info.shortDescription.slice(0, 199)}
-                                        <div>
-                                            <Button>more</Button>
-                                        </div>
+                                        {Description ?
+                                            <>
+                                                {info.shortDescription}
+                                                <div>
+                                                    <Button onClick={()=>setDescription(!Description)}>less</Button>
+                                                </div>
+                                            </> :
+                                            <>
+                                                {info.shortDescription.slice(0, 199)}
+                                                <div>
+                                                    <Button onClick={()=>setDescription(!Description)}>more</Button>
+                                                </div>
+                                            </>
+                                        }
                                     </>
                                     :
                                     <>
@@ -158,7 +166,7 @@ const SingleVid = () => {
                 }
             </div>
             {relatedArr.length !== 0 &&
-            <div>
+            <div className={sa.related}>
                 {relatedArr.map((a) => {
                     return <RelatedVid item={a.video}/>
                 })}

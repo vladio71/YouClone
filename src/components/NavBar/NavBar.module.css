@@ -13,7 +13,7 @@
 .containerSmall {
   position: fixed;
   background: rgba(255, 255, 255, 0.89);
-  width: 90px;
+  width: 60px;
   animation: 0.4s linear container;
   padding-top: 2rem;
   display: grid;
@@ -23,18 +23,18 @@
 
 @media (max-width: 1000px) {
   .containerSmall {
-    height: 1000px;
+    height: 100%;
   }
 }
 @media (min-height: 800px) {
   .containerSmall {
-    height: 1200px;
+    height: 100%;
   }
 }
 .innerIcon {
   position: relative;
   height: 4rem;
-  margin-left: 0.7rem;
+  margin: 0 auto;
   width: 4rem;
   border-radius: 0.3rem;
   font-size: 1rem;
@@ -43,7 +43,7 @@
 }
 
 .innerIconNav:hover {
-  background: rgba(132, 74, 153, 0.4);
+  background: rgba(236, 27, 27, 0.13);
   cursor: pointer;
 }
 .innerIconNav:hover .span {
@@ -64,8 +64,9 @@
   bottom: 1rem;
   width: fit-content;
   padding: 10px;
+  color: white;
   left: 5.5rem;
-  background: rgba(191, 191, 191, 0.45);
+  background: rgba(56, 56, 56, 0.45);
   border-radius: 0.5rem;
 }
 

@@ -5,8 +5,9 @@ import {Fetch} from "../Home";
 import {LoginOutlined} from '@ant-design/icons'
 import {Link} from 'react-router-dom'
 import {Avatar} from "@mui/material";
+import styled from "@emotion/styled";
 
-const YouTubeVid = (props: { a: Fetch }) => {
+ const YouTubeVid = (props: { a: Fetch }) => {
 
     const a = props.a
     return (

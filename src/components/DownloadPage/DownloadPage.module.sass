@@ -3,10 +3,15 @@
   display: grid
   grid-template-rows: .1fr 1fr
   margin-top: 3rem
+
 .innerGrid
   display: grid
   margin-left: 3rem
   grid-template-columns: .7fr 3fr
+  @media (max-width: 80rem)
+    grid-template-columns:  1fr
+    margin-left: 0
+
 
 .head
   grid-row: 1

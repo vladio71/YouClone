@@ -1,10 +1,10 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import sa from './Home.module.sass'
 import {Input} from "antd";
 import axios, {AxiosResponse} from "axios";
 import YouTubeVid from "./YouTubeVideo/YouTubeVid";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
-import {IconButton, InputBase, Paper, ToggleButton, ToggleButtonGroup} from "@mui/material";
+import {IconButton, InputBase, List, Paper, ToggleButton, ToggleButtonGroup} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 
@@ -75,16 +75,18 @@ const Home = () => {
     }, [sort])
     const navigate = useNavigate()
 
+    const listRef = useRef(null);
+
 
 
     return (
-        <header className="App-header">
+        <header className={sa.Content}>
             <div>
                 <div className={sa.searchContainer}>
                     <div className={sa.search}>
                         <Paper
                             elevation={3}
-                            style={{margin: '0 auto'}}
+                            style={{margin: '0 auto', width:'50%'}}
                             className={sa.align}
                             component="form"
                             sx={{p: '2px 4px', display: 'flex', alignItems: 'center', width: 400}}
@@ -111,8 +113,10 @@ const Home = () => {
 
                 <div className={sa.filterGrid}>
 
+
                     <ToggleButton
-                        style={{borderRadius: '3rem'}}
+                        className={sa.filterItem}
+                        style={{borderRadius: '3rem', width:'80px'}}
                         value="UA"
                         selected={sort === 'UA'}
                         onChange={changeFilter}
@@ -120,7 +124,7 @@ const Home = () => {
                         UA
                     </ToggleButton>
                     <ToggleButton
-                        style={{borderRadius: '3rem'}}
+                        style={{borderRadius: '3rem', width:'80px'}}
                         value="US"
                         selected={sort === 'US'}
                         onChange={changeFilter}
@@ -128,7 +132,7 @@ const Home = () => {
                         US
                     </ToggleButton>
                     <ToggleButton
-                        style={{borderRadius: '3rem'}}
+                        style={{borderRadius: '3rem' , width:'80px'}}
                         value="PL"
                         selected={sort === 'PL'}
                         onChange={changeFilter}
@@ -136,6 +140,8 @@ const Home = () => {
                         PL
                     </ToggleButton>
                 </div>
+
+
 
                 <div className={sa.mainGrid}>
                     {IdsArr.length != 0 &&

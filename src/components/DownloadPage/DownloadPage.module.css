@@ -9,6 +9,12 @@
   margin-left: 3rem;
   grid-template-columns: 0.7fr 3fr;
 }
+@media (max-width: 80rem) {
+  .innerGrid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+}
 
 .head {
   grid-row: 1;

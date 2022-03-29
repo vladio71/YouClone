@@ -23,9 +23,10 @@ function App() {
         <div className="App">
             <BrowserRouter>
             <Header/>
-                 <Routes>
+
+                <Routes>
                     <Route path={'/'} element={
-                        <div>
+                        <div style={{background:'rgba(231, 233, 238, 0.71)'}}>
                             <AnimatePresence exitBeforeEnter>
                                 <NavBar/>
                             </AnimatePresence>

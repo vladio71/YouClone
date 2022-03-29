@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "@emotion/styled";
 import {Comment} from "../SingleVid";
-import {Avatar} from "@mui/material";
+import {Avatar, Button} from "@mui/material";
 import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownAltOutlinedIcon from '@mui/icons-material/ThumbDownAltOutlined';
 
@@ -22,13 +22,12 @@ const MgTop = styled.div`
  `
 
 const CommentComp = ({item}: { item: Comment }) => {
-
-
+    const [Description, setDescription] = useState(false)
 
     return (
         <Container>
 
-            <div>
+            <div style={{margin: '.6rem'}}>
                 <Avatar src={item.authorThumbnails[0].url} sx={{width: 56, height: 56}}/>
 
             </div>
@@ -39,14 +38,37 @@ const CommentComp = ({item}: { item: Comment }) => {
                     </span>
 
                 <div>
-                    {item.text}
+                    {item.text.length > 200 ?
+                        <>
+                            {
+                                Description ?
+                                    <>
+                                        {item.text}
+                                        <div>
+                                            <Button onClick={() => setDescription(!Description)}>less</Button>
+                                        </div>
+                                    </> :
+                                    <>
+                                        {item.text.slice(0, 199)}...
+                                        <div>
+                                            <Button onClick={() => setDescription(!Description)}>more</Button>
+                                        </div>
+                                    </>
+                            }
+                        </>
+                        :
+                        <>
+                            {item.text}
+                        </>
+                    }
+
                 </div>
                 <div>
                     <MgTop>
 
                         <ThumbUpOutlinedIcon sx={{fontSize: '20px'}}/>
                         {item.likes}
-                        <ThumbDownAltOutlinedIcon  sx={{fontSize: '20px'}}/>
+                        <ThumbDownAltOutlinedIcon sx={{fontSize: '20px'}}/>
 
                     </MgTop>
                 </div>

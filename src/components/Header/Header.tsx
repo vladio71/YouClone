@@ -8,13 +8,18 @@ const Header = () => {
 
 
     return (
-        <div>
+        <div style={{maxWidth:'100vw'}}>
             <div className={sa.Head}>
                 <div className={sa.firstCell}>
                     <YouTubeIcon sx={{color: 'red', fontSize: 50}}/>
                     <Link to={'/'} style={{color:"black", marginTop:'1rem'}} >
                         <p>YouClone</p>
                     </Link>
+                </div>
+                <div>
+                </div>
+                <div className={sa.me}>
+                    @ Make my Hell Brighter
                 </div>
             </div>
         </div>
