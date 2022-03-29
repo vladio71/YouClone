@@ -17,21 +17,33 @@ YouClone is a React TS project that helps you find YouTube vids, watch or downlo
     4.Api - Youtube Search and Download, YouTube Search Results and others.
 
  ## Key Features
+     1.Search videos
+     2.Filters
+        - by Country
+        - relevance, view, etc..
+     3.View all info about the video 
+         - ChannelPage with its videos
+         - Related Vids
+         - Comments
+     4.Download items in deferent quality
+         - video
+         - mp3 
+      
 
 
 ## UI
-### Home Page
+#### Home Page
 Web            |  Responsive
 :-------------------------:|:-------------------------:
 ![](public/YouTube.png)  |  ![](public/HomeResponsive.png)
- ### Single Video Page
+ #### Single Video Page
  Web            |  Responsive
 :-------------------------:|:-------------------------:
 ![](public/SongleVid.png)  |  ![](public/resposiveYouLarger.png)
-### Download Page
+#### Download Page
  Web            |  Responsive
 :-------------------------:|:-------------------------:
 ![](public/DownloadPage.png)  |  ![](public/DownloadResponsive.png)
-### Single Video Page
+#### Single Video Page
 ![](public/ChannelPage.png)   
 
