@@ -6,7 +6,7 @@
  
 YouClone is a React TS project that helps you find YouTube vids, watch or download a full video or mp3 version.
 
-Check out the [deployed  site](https://pages.github.com/).
+Check out the [deployed  site](https://my-youclone.herokuapp.com/).
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/vladio71/YouClone)
 
